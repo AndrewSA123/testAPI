@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript">
+
+
+
+
+    function addAccount(){
+      var http = new XMLHttpRequest();
+      var change = document.getElementById('change');
+      var title = document.getElementById('title');
+      var genre = document.getElementById('genre');
+      var agerating = document.getElementById('agerating');
+      var url = "http://localhost:8080/cinema-app2/api/movie/getAllMovies";
+      http.open("GET", url, false);
+      http.send(JSON.stringify({"title":title.value,"genre":genre.value,"agerating":agerating.value}));
+      change.innerHTML = http.response;
+    }
+
+
+
+    </script>
+    <meta charset="utf-8">
+    <title>Movie API Front End</title>
+  </head>
+  <body>
+
+<p id='change'></p>
+
+<form class="" action="index.html" method="post">
+  <input type="text" id="title">title</input>
+  <input type="text" id="genre">title</input>
+  <input type="text" id="agerating">title</input>
+  <button type="submit" name="getAllButton" onclick="getAll()">Get All Movies</button>
+
+</form>
+<p id="change"></p>
+
+
+
+
+
+  </body>
+</html>
