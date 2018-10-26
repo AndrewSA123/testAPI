@@ -13,7 +13,7 @@
       var genre = document.getElementById('genre');
       var agerating = document.getElementById('agerating');
       var url = "http://localhost:8080/cinema-app2/api/movie/getAllMovies";
-      http.open("GET", url, false);
+      http.open("POST", url, false);
       console.log(title.value,genre.value,agerating.value);
       http.send(JSON.stringify({"title":title.value,"genre":genre.value,"rating":agerating.value}));
       change.innerHTML = http.response;
@@ -29,14 +29,14 @@
 
 <p id='change'></p>
 
-<form class="" action="index.html" method="post">
+<form class="" method="post">
   <p>Title</p>
   <input type="text" id="title"></input>
   <p>Genre</p>
   <input type="text" id="genre"></input>
   <p>Age Rating</p>
   <input type="text" id="agerating"></input>
-  <button type="submit" name="getAllButton" onclick="addAccount()">Get All Movies</button>
+  <button type="submit" name="getAllButton" onclick="addAccount()">Add Movie</button>
 
 </form>
 <p id="change"></p>
