@@ -18,7 +18,7 @@
 
     function removeMovie(id){
       var http = new XMLHttpRequest();
-      var url = "http://localhost:8080/cinema-app2/api/movie/removeMovie/" + id);
+      var url = "http://localhost:8080/cinema-app2/api/movie/removeMovie/" + id;
       car change = document.getElementById("removeChange");
       http.open("DELETE", url, false);
       http.send();
