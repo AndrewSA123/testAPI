@@ -14,7 +14,7 @@
       var agerating = document.getElementById('agerating');
       var url = "http://localhost:8080/cinema-app2/api/movie/getAllMovies";
       http.open("GET", url, false);
-      http.send(JSON.stringify({"title":title.value,"genre":genre.value,"agerating":agerating.value}));
+      http.send(JSON.stringify({"title":title.value,"genre":genre.value,"rating":agerating.value}));
       change.innerHTML = http.response;
     }
 
