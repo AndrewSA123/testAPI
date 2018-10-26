@@ -19,7 +19,7 @@
     function removeMovie(){
       var http = new XMLHttpRequest();
       var id = document.getElementById("removeID").value;
-      var url = "http://localhost:8080/cinema-app2/api/movie/removeMovie/" + id;
+      var url = "http://localhost:8080/cinema-app2/api/movie/deleteMovie/" + id;
       var change = document.getElementById("removeChange");
       http.open("DELETE", url, false);
       http.send();
