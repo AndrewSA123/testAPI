@@ -16,6 +16,15 @@
       change.innerHTML = http.response;
     }
 
+    function removeMovie(id){
+      var http = new XMLHttpRequest();
+      var url = "http://localhost:8080/cinema-app2/api/movie/removeMovie/" + id);
+      car change = document.getElementById("removeChange");
+      http.open("DELETE", url, false);
+      http.send();
+
+    }
+
 
 
     </script>
@@ -30,6 +39,8 @@
 <button type="submit" name="removeAMovie">Remove A Movie</button>
 <a href="addAccount.html"><button type="submit" name="addMovie">Add A Movie</button></a>
 
+<button type="button" name="button" onclick="removeMovie()"></button>
+<p id="removeChange"></p>
 
 
 
