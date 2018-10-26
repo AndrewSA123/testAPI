@@ -11,7 +11,7 @@
       var change = document.getElementById("change");
       var url = "http://localhost:8080/cinema-app2/api/movie/getAllMovies";
       http.open("GET", url, true);
-      http.send(null);
+      http.send();
       console.log(http.response);
       change.innerHTML = http.response;
     }
