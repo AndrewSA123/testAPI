@@ -9,7 +9,7 @@
     function getAll(){
       var http = new XMLHttpRequest();
       var change = document.getElementById("change");
-      var url = "localhost:8080/cinema-app2/api/movie/getAllMovies";
+      var url = "http://localhost:8080/cinema-app2/api/movie/getAllMovies";
       http.open("GET", url, false);
       http.send(null);
       change.innerHTML = http.reponse;
