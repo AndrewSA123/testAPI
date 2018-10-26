@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script type="text/javascript">
+
+
+
+
+    function getAll(){
+      var http = new XMLHttpRequest();
+      var change = document.getElementById("change");
+      var url = "localhost:8080/cinema-app2/api/movie/getAllMovies";
+      http.open("GET", url, false);
+      http.send(null);
+      change.innerHTML = http.reponse;
+    }
+
+
+
+    </script>
     <meta charset="utf-8">
     <title>Movie API Front End</title>
   </head>
@@ -14,22 +31,6 @@
 
 
 
-<script type="text/javascript">
 
-
-
-
-function getAll(){
-  var http = new XMLHttpRequest();
-  var change = document.getElementById("change");
-  var url = "localhost:8080/cinema-app2/api/movie/getAllMovies";
-  http.open("GET", url, false);
-  http.send(null);
-  change.innerHTML = http.reponse;
-}
-
-
-
-</script>
   </body>
 </html>
