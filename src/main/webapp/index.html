@@ -3,7 +3,9 @@
   <head>
     <script type="text/javascript">
 
-
+    function format(jOBJ){
+      JSON.stringify(jOBJ, null, "\t");
+    }
 
 
     function getAll(){
@@ -14,6 +16,7 @@
       http.send();
       console.log(http.response);
       change.innerHTML = http.response;
+      format();
     }
 
     function removeMovie(){
@@ -22,7 +25,7 @@
       var url = "http://localhost:8081/cinema-app2/api/movie/deleteMovie/" + id;
       var change = document.getElementById("removeChange");
       http.open("DELETE", url, false);
-      http.send();
+      http.send(http.response);
 
     }
 
