@@ -12,7 +12,7 @@
       var title = document.getElementById('title');
       var genre = document.getElementById('genre');
       var agerating = document.getElementById('agerating');
-      var url = "http://localhost:8080/cinema-app2/api/movie/createMovie";
+      var url = "http://localhost:8081/cinema-app2/api/movie/createMovie";
       http.open("POST", url, false);
       console.log(title.value,genre.value,agerating.value);
       http.send(JSON.stringify({title:title.value,genre:genre.value,rating:agerating.value}));

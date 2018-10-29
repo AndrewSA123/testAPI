@@ -9,7 +9,7 @@
     function getAll(){
       var http = new XMLHttpRequest();
       var change = document.getElementById("change");
-      var url = "http://localhost:8080/cinema-app2/api/movie/getAllMovies";
+      var url = "http://localhost:8081/cinema-app2/api/movie/getAllMovies";
       http.open("GET", url, false);
       http.send();
       console.log(http.response);
@@ -19,7 +19,7 @@
     function removeMovie(){
       var http = new XMLHttpRequest();
       var id = document.getElementById("removeID").value;
-      var url = "http://localhost:8080/cinema-app2/api/movie/deleteMovie/" + id;
+      var url = "http://localhost:8081/cinema-app2/api/movie/deleteMovie/" + id;
       var change = document.getElementById("removeChange");
       http.open("DELETE", url, false);
       http.send();
